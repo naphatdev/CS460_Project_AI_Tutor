@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FAFBFC" />
+    <meta name="description" content="AI Tutor — ติวเตอร์ AI ที่ประเมินระดับก่อนสอน (CS460 Project)" />
+
+    <!-- โหลดฟอนต์ Inter + IBM Plex Sans Thai จาก Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Splash style — ใช้ก่อน React mount เสร็จ (กัน white flash) -->
+    <style>
+      html, body { margin: 0; padding: 0; background: #FAFBFC; }
+      #root { min-height: 100vh; }
+      .ait-splash {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: 'Inter', 'IBM Plex Sans Thai', system-ui, sans-serif;
+        color: #6B7280;
+      }
+      .ait-splash__inner { text-align: center; }
+      .ait-splash__spinner {
+        width: 32px;
+        height: 32px;
+        border: 3px solid #E5E7EB;
+        border-top-color: #0EA5E9;
+        border-radius: 50%;
+        animation: ait-spin 0.8s linear infinite;
+        margin: 0 auto 12px;
+      }
+      .ait-splash__text { font-size: 13px; letter-spacing: 0.02em; }
+      @keyframes ait-spin { to { transform: rotate(360deg); } }
+    </style>
+
+    <title>AI Tutor — CS460</title>
+  </head>
+  <body>
+    <div id="root">
+      <!-- จะถูกแทนที่ทันทีเมื่อ React mount เสร็จ — โชว์ระหว่าง bundle โหลด -->
+      <div class="ait-splash" aria-label="กำลังโหลด">
+        <div class="ait-splash__inner">
+          <div class="ait-splash__spinner" aria-hidden="true"></div>
+          <div class="ait-splash__text">กำลังเริ่มต้น...</div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset เริ่มต้น */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-canvas text-gray-900;
+  /* ฟอนต์ smoothing ให้ตัวอักษรไทย+อังกฤษคมขึ้น */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* คุมระยะห่างของตัวอักษรไทยให้พอดี ไม่แน่นเกิน */
+:lang(th),
+body {
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* scroll behavior นุ่มขึ้น เวลาเปลี่ยน step */
+html {
+  scroll-behavior: smooth;
+}
+
+/* focus ring กลางที่ใช้ได้ทุก interactive — สอดคล้องกับ accessibility */
+*:focus-visible {
+  outline: 2px solid theme("colors.brand.500");
+  outline-offset: 2px;
+  border-radius: 4px;
+}

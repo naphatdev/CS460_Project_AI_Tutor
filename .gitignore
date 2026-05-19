@@ -1,36 +1,177 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ============================================================
+# Node.js / Frontend (Vite + React)
+# ============================================================
+node_modules/
+jspm_packages/
+bower_components/
+web_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Build output
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.vite/
+.cache/
+.parcel-cache/
+.docusaurus/
 
-# testing
-/coverage
+# Vite timestamp files
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
 
-# local env files
-.env*.local
-.env
+# Runtime
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# vercel
-.vercel
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-# typescript
+# Coverage / tests
+coverage/
+*.lcov
+.nyc_output/
+.eslintcache
+.stylelintcache
 *.tsbuildinfo
-next-env.d.ts
+
+# Package manager caches
+.npm/
+.pnpm-store/
+.yarn-integrity
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Output of 'npm pack'
+*.tgz
+
+# Misc Node tooling
+.tern-port
+.node_repl_history
+
+# ============================================================
+# Python / Backend (FastAPI)
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env-venv/
+ENV/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+htmlcov/
+.tox/
+.nox/
+
+# mypy / type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+
+# Jupyter
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ============================================================
+# Environment variables (NEVER commit secrets)
+# ============================================================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+*.env
+!.env.example
+
+# ============================================================
+# IDE / Editor
+# ============================================================
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ============================================================
+# OS
+# ============================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ============================================================
+# Database (PostgreSQL local dumps + ChromaDB)
+# ============================================================
+*.sqlite
+*.sqlite3
+*.db
+chroma_db/
+chroma/
+*.dump
+*.sql.bak
+
+# ============================================================
+# Misc
+# ============================================================
+*.bak
+*.tmp
+*.temp
+.tmp/
